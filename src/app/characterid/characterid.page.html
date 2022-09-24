@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>characterid</ion-title>
+    <ion-title>{{this.dataApi.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,11 +11,33 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-card >
+  <ion-card>
     <img src="{{this.dataApi.image}}" />
     <ion-card-header>
-      <ion-card-subtitle>{{this.dataApi.gender}}</ion-card-subtitle>
       <ion-card-title>{{this.dataApi.name}}</ion-card-title>
     </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Genero</ion-label>
+        <p>{{this.dataApi.gender}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label>Estado</ion-label>
+        <p>{{this.dataApi.status}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label>Especie</ion-label>
+        <p>{{this.dataApi.species}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label>Origen</ion-label>
+        <p>{{this.dataApi.origin.name}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label>Apariciones</ion-label>
+        <p>{{(this.dataApi.episode).length}}</p>
+      </ion-item>
+    </ion-card-content>
   </ion-card>
+  <ion-buton active [routerLink]="['/home']">Volver</ion-buton>
 </ion-content>
