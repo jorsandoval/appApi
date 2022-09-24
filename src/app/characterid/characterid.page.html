@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>characterid</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card >
+    <img src="{{this.dataApi.image}}" />
+    <ion-card-header>
+      <ion-card-subtitle>{{this.dataApi.gender}}</ion-card-subtitle>
+      <ion-card-title>{{this.dataApi.name}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

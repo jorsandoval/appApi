@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'characterid/:id',
+    loadChildren: () => import('./characterid/characterid.module').then( m => m.CharacteridPageModule)
+  },
 ];
 
 @NgModule({
